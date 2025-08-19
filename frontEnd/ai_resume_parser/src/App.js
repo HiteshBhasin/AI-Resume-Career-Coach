@@ -1,6 +1,6 @@
 
 import './App.css';
-import App from ""  
+import App from "./component/Fileupload"  
 function App() {
   return (
     <div className="App">
