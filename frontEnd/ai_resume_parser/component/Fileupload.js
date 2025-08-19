@@ -8,5 +8,14 @@ const App = ()=>{
     const formData = new FormData();
     formData.append("Resume", selectFile, selectFile.name);
 
+    await fetch ("",{
+        method:"POST",
+        body: formData
+    });
 
+    return(
+        <div>
+            <input type="File" onChange={onFileChange}/>
+        </div>
+    )
 }
