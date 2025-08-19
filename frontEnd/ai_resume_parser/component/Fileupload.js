@@ -13,11 +13,14 @@ const App = ()=>{
         method:"POST",
         body: formData
     });
-    };
-    
+    };   
+   
+
     return(
         <div>
             <input type="File" onChange={onFileChange}/>
         </div>
     )
-}
+ };
+    export default App
+
