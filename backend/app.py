@@ -3,12 +3,7 @@ from fastapi import FastAPI
 from fastapi import File, UploadFile
 from pydantic import BaseModel
 import asyncio
-from dotenv import load_dotenv
 from pypdf import PdfReader
-
-load_dotenv()
-
-
 
 app = FastAPI()
 
@@ -21,11 +16,6 @@ async def indexPage():
 async def processingFile(resume:UploadFile = File(...)):
     contents = await resume.read()
     resumer_text=extract_from_pdf(contents)
-    
-    
-    
-    
-    
     
 def extract_from_pdf(pdf_path):
     reader=PdfReader(pdf_path)
