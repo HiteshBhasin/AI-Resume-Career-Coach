@@ -17,6 +17,7 @@ async def processingFile(resume:UploadFile = File(...)):
     contents = await resume.read()
     resumer_text=extract_from_pdf(contents)
     
+    
 def extract_from_pdf(pdf_path):
     reader=PdfReader(pdf_path)
     text=""
