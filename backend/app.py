@@ -4,6 +4,7 @@ from fastapi import File, UploadFile
 from pydantic import BaseModel
 import asyncio
 from pypdf import PdfReader
+import dataIngestion
 
 app = FastAPI()
 
@@ -16,6 +17,7 @@ async def indexPage():
 async def processingFile(resume:UploadFile = File(...)):
     contents = await resume.read()
     resumer_text=extract_from_pdf(contents)
+    return dataIngestion.processingFile(resumer_text)
     
     
 def extract_from_pdf(pdf_path):
