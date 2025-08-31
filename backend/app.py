@@ -19,7 +19,7 @@ async def processingFile(resume:UploadFile = File(...)):
     resumer_text=extract_from_pdf(contents)
     return dataIngestion.processingFile(resumer_text)
     
-    
+#Helper function 
 def extract_from_pdf(pdf_path):
     reader=PdfReader(pdf_path)
     text=""
