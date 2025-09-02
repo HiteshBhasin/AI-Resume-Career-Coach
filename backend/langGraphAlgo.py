@@ -7,3 +7,6 @@ from langchain_core.tools import tool
 class StateAgent(TypedDict):
     messages: Annotated[Sequence[BaseMessage], add_messages]
     
+@tool
+def 
+    
