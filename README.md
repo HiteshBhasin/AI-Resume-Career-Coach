@@ -1,6 +1,6 @@
 # AI-Resume-Career-Coach
 An immediate market in the student network.
-
+File System.  
 resume-coach-app/
 │
 ├── frontend/                     # React app (student uploads resume here)
